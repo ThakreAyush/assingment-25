@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product preview page</title>
+    <style>
+
+    body{
+        background-color: rgb(0, 0, 0);
+    }
+        #main-product-image{
+            width: 400px;
+            height: 600px;
+            object-fit: cover;
+            border: 1px solid black;
+            border-radius: 20px;
+            display: block;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0.25);
+            margin: 20px auto;
+        }
+        .product-image{
+            height: 80px;
+            width: 70px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin: 10px;
+            border: 1px solid black;
+            cursor: pointer;
+
+        }
+
+        .product-img-container{
+            display: flex;
+            justify-content: center;
+        }
+
+    </style>
+</head>
+<body>
+    <img src="dress1.jpg" id="main-product-image" />
+
+<div class="product-img-container">
+    <img src="dress1.jpg" class="product-image" onclick="changeImage('dress1.jpg')"/> 
+    <img src="dress2.jpg" class="product-image" onclick="changeImage('dress2.jpg')"/> 
+    <img src="dress3.jpg" class="product-image" onclick="changeImage('dress3.jpg')"/>
+    <img src="dress4.jpg" class="product-image" onclick="changeImage('dress4.jpg')"/>
+    <img src="dress5.jpg" class="product-image" onclick="changeImage('dress5.jpg')"/>
+   
+</div>
+
+<script>
+    function changeImage(imageName){
+        const mainImage = document.getElementById('main-product-image');
+        mainImage.src = imageName;
+ 
+    }
+</script>
+</body>
+</html>
